@@ -10,7 +10,7 @@ export default class UserGreetingCommunity extends LightningElement {
     @track error;
     @track name;
     @track memberSince;
-    @track Active_Fitness_Member__c;
+    @track isMember;
 
     jccsfMemberBadge = MEMBER_ICON;
 
