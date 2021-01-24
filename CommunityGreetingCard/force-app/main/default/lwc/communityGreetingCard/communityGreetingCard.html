@@ -1,0 +1,27 @@
+<template>
+    <div class="c-container">
+        <lightning-layout>
+
+            <lightning-layout-item padding="around-small">
+                <div class="user-greeting">Hello, {name}!</div>
+            </lightning-layout-item>                
+            <template if:true={isMember}>
+                <lightning-layout-item padding="around-small">
+                        <img src={jccsfMemberBadge} alt="JCCSF Member" class="customIcon" align="center">
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <div class="layout-box">
+                        Member Since &nbsp;
+                        <lightning-formatted-date-time 
+                            value={memberSince}
+                            year="numeric" 
+                            month="short" 
+                            day="2-digit">
+                        </lightning-formatted-date-time>
+                    </div>
+                </lightning-layout-item>
+            </template>
+
+        </lightning-layout>
+    </div>
+</template>
